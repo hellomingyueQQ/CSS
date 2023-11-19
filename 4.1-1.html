@@ -24,8 +24,11 @@
                 if (e.pageX == 0 && e.pageY == 0) {
                     return;
                 }
+               
                 oImg.style.left = (e.pageX - offsetX) + "px";
                 oImg.style.top = (e.pageY - offsetY) + "px";
+                oImg.style.left = e.pageX + "px";
+                oImg.style.top = e.pageY  + "px";
             }
         }
     </script>
