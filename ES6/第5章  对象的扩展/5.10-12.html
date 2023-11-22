@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        const person = {};
+        person.name = "Jack";
+
+        // 允许被重新赋值
+        person.name = "Lucy";
+        // 允许被遍历
+        for (let key in person) {
+            console.log(key);
+        }
+        // 允许被删除
+        delete person.name;
+        console.log(person);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        const person = {
+            name: "Jack",
+            age: 24
+        };
+
+        // 传统方式
+        console.log("name" in person)
+        // Reflect
+        console.log(Reflect.has(person, "name"));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

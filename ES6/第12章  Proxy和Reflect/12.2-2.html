@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        // 传统方式
+        const person1 = {
+            name: "Jack",
+            age: 24
+        };
+        delete person1.name;
+        console.log(person1);
+
+        // Reflect
+        const person2 = {
+            name: "Jack",
+            age: 24
+        };
+        Reflect.deleteProperty(person2, "name");
+        console.log(person2);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

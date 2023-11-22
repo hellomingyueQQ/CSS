@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        const person = {};
+        Object.defineProperty(person, "name", {
+            value: "Jack",
+            enumerable: true
+        });
+        Object.defineProperty(person, "age", {
+            value: 24,
+            enumerable: false
+        });
+
+        // for...in
+        for (let key in person) {
+            console.log(key);
+        }
+
+        // Object.keys()
+        const keyArr = Object.keys(person);
+        console.log(keyArr);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

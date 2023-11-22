@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        function createPromise(color) {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve(color);
+                }, 1000);
+            });
+        }
+
+        createPromise("red").then((color) => {
+            console.log(color);
+            return createPromise("green");
+        }).then((color) => {
+            console.log(color);
+            return createPromise("yellow");
+        }).then((color) => {
+            console.log(color);
+        });
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

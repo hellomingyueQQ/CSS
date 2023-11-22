@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        function flatArr(arr) {
+            var resultArr = [];
+            arr.forEach(function (item) {
+                var str = Object.prototype.toString.call(item);
+                if (str.indexOf("Array") !== -1) {
+                    resultArr = resultArr.concat(flatArr(item));
+                } else {
+                    resultArr = resultArr.concat(item)
+                }
+            });
+            return resultArr;
+        }
+
+        var arr = [1, [2, [3]], 4, [5]];
+        console.log(flatArr(arr));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

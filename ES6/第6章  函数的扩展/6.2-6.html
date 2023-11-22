@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        function Person(name, age) {
+            this.name = name;
+            this.age = age;
+        }
+        Person.prototype.getName = () => {
+            console.log(`姓名：${this.name}`);
+        };
+
+        const p = new Person("Jack", 24);
+        p.getName();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        function Person(name) {
+            // 类的属性
+            this.name = name;
+        }
+        // 类的方法
+        Person.prototype.sayName = function () {
+            console.log(this.name);
+        };
+        var p = new Person("Jack");
+        p.sayName(); 
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

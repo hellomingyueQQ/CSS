@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        function findBook(book) {
+            const { tag, price } = book;
+            const options = {
+                name: "从0到1"
+            };
+
+            if (tag) {
+                Object.assign(options, { tag });
+            }
+            if (price) {
+                Object.assign(options, { price });
+            }
+            console.log(options);
+            // 接下来可以使用options作为查询数据库的条件
+        }
+
+        const book = {
+            price: 89
+        };
+        findBook(book);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

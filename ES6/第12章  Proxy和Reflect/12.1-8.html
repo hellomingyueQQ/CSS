@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        // 原对象
+        const person = {
+            name: "Jack",
+            _age: 24
+        };
+        // 配置对象
+        const handler = {
+            has(obj, key) {
+                if (key.startsWith("_")) {
+                    throw new Error("禁止访问私有属性");
+                } else {
+                    return key in obj;
+                }
+            }
+        };
+
+        // Proxy对象
+        const p = new Proxy(person, handler);
+        console.log("_age" in p);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

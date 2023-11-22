@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        // 原对象
+        const person = {
+            name: "Jack",
+            _age: 24
+        };
+        // 配置对象
+        const handler = {
+            get(obj, key, proxy) {
+                if (!key.startsWith("_")) {
+                    return Reflect.get(obj, key, proxy);
+                } else {
+                    return undefined;
+                }
+            },
+            set(obj, key, value) {
+                if (!key.startsWith("_")) {
+                    Reflect.set(obj, key, proxy);
+                }
+            },
+            has(obj, key) {
+                if (!key.startsWith("_")) {
+                    return Reflect.has(obj, key);
+                }
+            },
+            deleteProperty(obj, key) {
+                Reflect.deleteProperty(obj, key);
+                return true;
+            },
+            ownKeys(obj) {
+                const result = Reflect.ownKeys(obj).filter((item) => {
+                    return !item.startsWith("_");
+                });
+                return result;
+            }
+        };
+
+        // proxy对象
+        const p = new Proxy(person, handler);
+        console.log(p._age);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

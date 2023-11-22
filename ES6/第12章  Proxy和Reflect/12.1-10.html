@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        // 原对象
+        const person = {
+            name: "Jack",
+            _age: 24
+        };
+        // 配置对象
+        const handler = {
+            deleteProperty(obj, key) {
+                if (key.startsWith("_")) {
+                    throw new Error("私有属性禁止被删除");
+                } else {
+                    delete obj[key];
+                    return true;
+                }
+            }
+        };
+
+        // Proxy对象
+        const p = new Proxy(person, handler);
+        delete p.name;
+        console.log(p);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

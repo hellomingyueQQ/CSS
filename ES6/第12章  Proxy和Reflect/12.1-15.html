@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        // 原对象
+        const person = {
+            name: "Jack",
+            age: 24
+        };
+        // 配置对象
+        const handler = {
+            set(obj, key, value) {
+                if (key === "age") {
+                    if (value < 0 || value > 150) {
+                        throw new Error("age的值必须在0~150之间");
+                    } else {
+                        obj[key] = value;
+                    }
+                }
+            }
+        };
+
+        // Proxy对象
+        const p = new Proxy(person, handler);
+        p.age = 200;
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

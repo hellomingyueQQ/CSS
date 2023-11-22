@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        class ParentBall {
+            constructor(radius) {
+                this.radius = radius;
+            }
+            getArea() {
+                console.log(2 * Math.PI * this.radius);
+            }
+        }
+
+        class ChildBall extends ParentBall {
+            constructor(radius, color) {
+                super(radius);
+                this.color = color;
+            }
+        }
+        const ball = new ChildBall(10, "red");
+        console.log(ball.color);
+        ball.getArea();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        const a = new Set([1, 2, 3]);
+        const b = new Set([2, 3, 4]);
+
+        const arr = [...a].filter((item) => {
+            if (b.has(item)) {
+                return item;
+            }
+        });
+        const result = new Set(arr);
+        console.log(result);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

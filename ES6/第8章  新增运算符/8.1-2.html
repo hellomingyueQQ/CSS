@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        const obj1 = {
+            name: {
+                first: "Jack",
+                last: "Mo"
+            },
+            age: 24
+        };
+
+        const obj2 = { ...obj1 };
+        obj2.name.first = "Lucy";
+        console.log(obj1.name.first);
+        console.log(obj2.name.first);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

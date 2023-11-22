@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        const name = Symbol();
+        const person = {
+            [name]: "Jack",
+            age: 24
+        };
+        const result = Reflect.ownKeys(person);
+        console.log(result);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

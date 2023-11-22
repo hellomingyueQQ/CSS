@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        const person = {
+            name: "Jack",
+            _age: 24
+        };
+        const handler = {
+            set(obj, key, value) {
+                if (!key.startsWith("_")) {
+                    obj[key] = value;
+                }
+            }
+        };
+
+        const p = new Proxy(person, handler);
+        p.name = "Lucy";
+        p._age = 18;
+        console.log(p);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

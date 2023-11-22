@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        const p = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                console.log("绿叶学习网");
+                resolve("绿叶学习网");
+            }, 1000);
+        });
+        p.then((color) => {
+            const str = color.split("").reverse().join("");
+            console.log(str);
+        });
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        function fn(user) {
+            const { name: { firstName, lastName }, age } = user;
+            console.log(`姓：${lastName}`);
+            console.log(`名：${firstName}`);
+        }
+
+        const user = {
+            name: {
+                firstName: "Jack",
+                lastName: "Mo"
+            },
+            age: 24
+        };
+        fn(user);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        function createBox(box) {
+            const defaultBox = {
+                radius: 10,
+                color: "red"
+            };
+            Object.assign(defaultBox, box);
+            return defaultBox;
+        }
+
+        const box = createBox({ radius: 20 });
+        console.log(box);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

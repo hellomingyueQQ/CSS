@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        const a = Symbol.for();
+        const b = Symbol.for();
+        console.log(a === b);
+
+        const m = Symbol.for("foo");
+        const n = Symbol.for("foo");
+        console.log(m === n);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

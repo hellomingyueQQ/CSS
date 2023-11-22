@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        const person = {};
+
+        // 数据属性
+        Object.defineProperty(person, "name", {
+            configurable: true,
+            enumerable: true,
+            value: "Jack",
+            writable: true,
+            get() { },
+            set() { }
+        });
+        console.log(person.name);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

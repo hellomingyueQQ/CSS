@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        // 原对象
+        const person = {
+            name: "Jack",
+            age: 24
+        };
+        // 配置对象
+        const handler = {
+            get(obj, key, proxy) {
+                console.log(obj);
+                console.log(key);
+                console.log(proxy);
+                return obj[key];
+            }
+        };
+
+        // Proxy对象
+        const p = new Proxy(person, handler);
+        const name = p.name;
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

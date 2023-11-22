@@ -1,0 +1,32 @@
+<!DOCTYPE html> 
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        window.onload = function() {
+            const oTxt = document.getElementById("txt");
+            const oContent = document.getElementById("content");
+
+            // 定义一个对象
+            const obj = {};
+            Object.defineProperty(obj, "text", {
+                get() { },
+                set(value) {
+                    oTxt.value = value;
+                    oContent.innerText = value;
+                }
+            });
+
+            // 文本框的keyup事件
+            oTxt.addEventListener("keyup", function(e) {
+                obj.text = e.target.value;
+            }, false);
+        }
+    </script>
+</head>
+<body>
+    <input id="txt" type="text" />
+    <p id="content"></p>
+</body>
+</html>

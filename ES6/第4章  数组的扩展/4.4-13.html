@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <script>
+        window.onload = function() {
+            let oLis = document.getElementsByTagName("li");
+            oLis = Array.from(oLis);
+
+            const colorArr = ["red", "green", "blue"];
+            oLis.forEach((item, index) => {
+                item.style.color = colorArr[index];
+            });
+        }
+    </script>
+</head>
+<body>
+    <ul>
+        <li>红色</li>
+        <li>绿色</li>
+        <li>蓝色</li>
+    </ul>
+</body>
+</html>

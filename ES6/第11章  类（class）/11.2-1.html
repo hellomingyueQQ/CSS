@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        class People {
+            constructor() {
+                this.type = "Human";
+            }
+            getType() {
+                console.log(this.type);
+            }
+        }
+        class Person extends People {
+            constructor() {
+                super();
+                this.name = "Jack";
+            }
+            getName() {
+                console.log(this.name);
+            }
+        }
+
+        const p = new Person();
+        p.getType();
+        p.getName();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

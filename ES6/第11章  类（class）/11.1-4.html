@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        class Person {
+            constructor(name) {
+                //类的属性 
+                this.name = name;
+            }
+            // 静态方法
+            static sayHi() {
+                console.log("Hello");
+            }
+            //类的方法
+            sayName() {
+                console.log(this.name);
+            }
+        }
+        const p = new Person("Jack");
+        p.sayName();
+        Person.sayHi();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

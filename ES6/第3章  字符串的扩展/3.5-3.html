@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        const d = new Date();
+
+        // 获取年、月、日
+        const year = d.getFullYear();
+        let month = d.getMonth() + 1;
+        let day = d.getDate();
+        // 处理月数
+        if (month.toString().length < 2) {
+            month = "0" + month;
+        }
+        // 处理日数
+        if (day.toString().length < 2) {
+            day = "0" + day;
+        }
+
+        const time = year + "-" + month + "-" + day;
+        console.log(time);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        const person = {
+            _name: "Jack"
+        };
+        Object.defineProperty(person, "name", {
+            get() {
+                return this._name;
+            },
+            set(value) {
+                this._name = value;
+            }
+        });
+        console.log(person.name);
+        person.name = "Lucy";
+        console.log(person.name);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

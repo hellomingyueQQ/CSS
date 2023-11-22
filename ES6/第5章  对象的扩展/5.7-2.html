@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        const obj1 = {
+            a: 1,
+            b: 2,
+            c: 3
+        };
+
+        const arr = Object.entries(obj1).map(function (item) {
+            let key = item[0];
+            let value = item[1];
+            return [key, value * 3];
+        })
+        const obj2 = Object.fromEntries(arr);
+        console.log(obj2);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

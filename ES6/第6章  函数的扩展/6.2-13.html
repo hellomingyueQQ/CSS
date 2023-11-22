@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        window.a = "window";
+        let obj = {
+            a: "obj",
+            fn: function () {
+                setTimeout(() => {
+                    console.log(this.a);
+                })
+            }
+        };
+        obj.fn();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

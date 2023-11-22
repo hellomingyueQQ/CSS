@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        // 原对象
+        const person = {
+            name: "Jack",
+            age: 24
+        };
+        // 配置对象
+        const handler = {
+            deleteProperty(obj, key) {
+                console.log(`${key}属性已被删除`);
+                delete obj[key];
+                return true;
+            }
+        };
+
+        // Proxy对象
+        const p = new Proxy(person, handler);
+        delete p.name;
+        console.log(p);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

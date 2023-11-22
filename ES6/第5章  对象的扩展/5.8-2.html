@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        function F() { }
+        const f = new F();
+        const result = Object.getPrototypeOf(f) === F.prototype;
+        console.log(result);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

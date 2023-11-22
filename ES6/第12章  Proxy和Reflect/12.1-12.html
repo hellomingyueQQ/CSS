@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        // 原对象
+        const person = {
+            name: "Jack",
+            _age: 24
+        };
+        // 配置对象
+        const handler = {
+            ownKeys(obj) {
+                const result = Object.keys(obj).filter((item) => {
+                    return !item.startsWith("_");
+                });
+                return result;
+            }
+        };
+
+        // Proxy对象
+        const p = new Proxy(person, handler);
+        const keyArr = Object.getOwnPropertyNames(p);
+        console.log(keyArr);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

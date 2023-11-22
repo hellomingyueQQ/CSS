@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        // 原对象
+        const person = {
+            name: "Jack",
+            age: 24
+        };
+        // 配置对象
+        const handler = {
+            set(obj, key, value) {
+                console.log(`${key}属性被重新赋值`);
+                obj[key] = value;
+            }
+        };
+
+        // Proxy对象
+        const p = new Proxy(person, handler);
+        p.name = "Lucy";
+        console.log(p.name);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

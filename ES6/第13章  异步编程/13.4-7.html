@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        const p = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                console.log("red");
+                resolve();
+            }, 1000);
+        });
+        const result = p.then(() => {
+            console.log("green");
+        });
+        console.log(result);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

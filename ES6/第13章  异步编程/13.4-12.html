@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <script>
+        const srcArr = [
+            "./img/html.png",
+            "./img/css.png",
+            "./img/js.png"
+        ];
+        function createPromise(src) {
+            return new Promise(((resolve, reject) => {
+                const img = new Image();
+                img.src = src;
+                img.onload = function () {
+                    resolve(img);
+                };
+                img.onerror = function () {
+                    reject(`图片丢失，路径为：${src}`);
+                };
+            }));
+        }
+        Promise.all([
+            createPromise(srcArr[0]),
+            createPromise(srcArr[1]),
+            createPromise(srcArr[2])
+        ]).then((imgs) => {
+            imgs.forEach((item) => {
+                document.body.appendChild(item);
+            });
+        }).catch((err) => {
+            console.log(err);
+        });
+    </script>
+</head>
+<body>
+</body>
+</html>
