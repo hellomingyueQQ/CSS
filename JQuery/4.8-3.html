@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function () {
+            //定义数组
+            var arr = ["HTML", "CSS", "JavaScript", "jQuery", "Vue.js"];
+
+            $("#btn").click(function () {
+                //将数组元素一一赋值给对应索引号的li元素
+                $("li").each(function (index) {
+                    var txt = arr[index];
+                    $(this).text(txt);
+                });
+            });
+        })
+    </script>
+</head>
+<body>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <input id="btn" type="button" value="添加内容" />
+</body>
+</html>

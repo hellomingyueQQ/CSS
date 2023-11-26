@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="js/jquery-1.12.4.min.js" ></script>
+    <script>
+        $(function(){
+            //定义颜色数组
+            var colors=["red","orange","yellow","green","blue"];
+            
+            //为元素添加背景颜色
+            $("#btn").click(function(){   
+                $("li").each(function(index){
+                    $(this).css("background-color",colors[index]);
+                });
+            });
+        })
+    </script>
+</head>
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+    <input id="btn" type="button" value="添加背景" />
+</body>
+</html>
