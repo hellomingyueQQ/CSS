@@ -6,20 +6,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        .container {
+            column-count: 2;
+            margin-top: 5px;
+        }
+
         .method {
             vertical-align: top;
         }
 
         table {
+            margin-bottom: 10px;
             border-collapse: collapse;
             /* 合并相邻边框 */
         }
 
-        table,tr,td,th{border:1px solid silver;}
+        table,
+        tr,
+        td,
+        th {
+            border: 1px solid silver;
+        }
+
+        tr td:nth-child(1) {
+            width: 240px;
+        }
+
+        tr td:nth-child(2) {
+            width: 350px;
+        }
+
+        caption{
+            font-weight: bold;
+        }
     </style>
 </head>
 
 <body>
+    <header style="text-align: center;font-weight: bold;margin: 5px;">前端汇总</header>
     <div class="container">
         <div class="method">
             <table>
@@ -33,12 +57,184 @@
                         <td>toUpperCase()</td>
                         <td>将小写字母转换为大写字母</td>
                     </tr>
+                    <tr>
+                        <td>charAt(n)</td>
+                        <td>获取第(n+1)个字符</td>
+                    </tr>
+                    <tr>
+                        <td>substring(start, end)</td>
+                        <td>截取字符串的一部分，范围为[start,end)</td>
+                    </tr>
+                    <tr>
+                        <td>replace(原字符串，替换字符串)</td>
+                        <td>用某个字符串替换字符串的某一部分</td>
+                    </tr>
+                    <tr>
+                        <td>replace(正则表达式，替换字符串)</td>
+                        <td>用正则表达式替换字符串的某一部分</td>
+                    </tr>
+                    <tr>
+                        <td>split("分隔符")</td>
+                        <td>把字符串分隔成数组</td>
+                    </tr>
+                    <tr>
+                        <td>indexOf(子字符串)</td>
+                        <td>查找字符串"首次出现"的下标</td>
+                    </tr>
+                    <tr>
+                        <td>lastIndexOf(子字符串)</td>
+                        <td>查找字符串"最后出现"的下标</td>
+                    </tr>
                 </tbody>
             </table>
         </div>
-        <div class="method"></div>
-        <div class="method"></div>
-        <div class="method"></div>
+        <div class="method">
+            <table>
+                <caption>数组的方法</caption>
+                <tr>
+                    <td>slice(start,end)</td>
+                    <td>截取数组的某一部分，范围为[start,end)</td>
+                </tr>
+                <tr>
+                    <td>unshift()</td>
+                    <td>在数组开头添加元素</td>
+                </tr>
+                <tr>
+                    <td>push()</td>
+                    <td>在数组结尾添加元素</td>
+                </tr>
+                <tr>
+                    <td>shift()</td>
+                    <td>删除数组的第一个元素</td>
+                </tr>
+                <tr>
+                    <td>pop()</td>
+                    <td>删除数组的最后一个元素</td>
+                </tr>
+                <tr>
+                    <td>sort(函数名)</td>
+                    <td>将数组元素进行大小排序</td>
+                </tr>
+                <tr>
+                    <td>reverse()</td>
+                    <td>将数组元素颠倒排序</td>
+                </tr>
+                <tr>
+                    <td>join("连接符")</td>
+                    <td>将数组元素连接成字符串</td>
+                </tr>
+            </table>
+        </div>
+        <div class="method">
+            <table>
+                <caption>用于获取时间的方法</caption>
+                <tr>
+                    <td>getFullYear()</td>
+                    <td>获取年份，取值为4位数字</td>
+                </tr>
+                <tr>
+                    <td>getMonth()</td>
+                    <td>获取月份，取值为0(一月)到11(十二月)之间的整数</td>
+                </tr>
+                <tr>
+                    <td>getDate()</td>
+                    <td>获取日数，取值为1-31的整数</td>
+                </tr>
+                <tr>
+                    <td>getHours()</td>
+                    <td>获取小时数，取值为0-23的整数</td>
+                </tr>
+                <tr>
+                    <td>getMinutes()</td>
+                    <td>获取分钟数，取值为0-59的整数</td>
+                </tr>
+                <tr>
+                    <td>getSeconds()</td>
+                    <td>获取秒数，取值为0-59的整数</td>
+                </tr>
+            </table>
+            <table>
+                <caption>用于设置时间的方法</caption>
+                <tr>
+                    <td>setFullYear()</td>
+                    <td>可以设置年，月，日</td>
+                </tr>
+                <tr>
+                    <td>setMonth()</td>
+                    <td>可以设置月，日</td>
+                </tr>
+                <tr>
+                    <td>setDate()</td>
+                    <td>可以设置日</td>
+                </tr>
+                <tr>
+                    <td>setHours()</td>
+                    <td>可以设置时，分，秒，毫秒</td>
+                </tr>
+                <tr>
+                    <td>setMinutes()</td>
+                    <td>可以设置分，秒，毫秒</td>
+                </tr>
+                <tr>
+                    <td>setSeconds()</td>
+                    <td>可以设置秒，毫秒</td>
+                </tr>
+            </table>
+        </div>
+        <div class="method">
+            <table>
+                <caption>Math对象的方法</caption>
+                <tr>
+                    <td>max(a,b,...,n)</td>
+                    <td>返回一组数中的最大值</td>
+                </tr>
+                <tr>
+                    <td>min(a,b,...,n)</td>
+                    <td>返回一组数中的最小值</td>
+                </tr>
+                <tr>
+                    <td>floor(x)</td>
+                    <td>向下取整</td>
+                </tr>
+                <tr>
+                    <td>ceil(x)</td>
+                    <td>向上取整</td>
+                </tr>
+                <tr>
+                    <td>random()</td>
+                    <td>生成随机数，范围为[0,1)</td>
+                </tr>
+                <tr>
+                    <td>sin(x)</td>
+                    <td>正弦</td>
+                </tr>
+                <tr>
+                    <td>cos(x)</td>
+                    <td>余弦</td>
+                </tr>
+                <tr>
+                    <td>tan(x)</td>
+                    <td>正切</td>
+                </tr>
+                <tr>
+                    <td>asin(x)</td>
+                    <td>反正弦</td>
+                </tr>
+                <tr>
+                    <td>acos(x)</td>
+                    <td>反余弦</td>
+                </tr>
+                <tr>
+                    <td>atan(x)</td>
+                    <td>反正切</td>
+                </tr>
+                <tr>
+                    <td>atan2(x)</td>
+                    <td>反正切</td>
+                </tr>
+
+            </table>
+        </div>
     </div>
 </body>
 
