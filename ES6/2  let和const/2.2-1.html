@@ -14,7 +14,7 @@
     }
     console.log(title);
   </textarea>
-  <textarea id="output" rows="10" cols="50" readonly></textarea>
+  <textarea id="output" rows="10" cols="50" readonly style="display: none;"></textarea>
   <br>
   <div id="consoleOutput"></div>
   <script>
@@ -29,7 +29,6 @@
     function runCode() {
       var code = document.getElementById("codeInput").value;
       var output = document.getElementById("output");
-
       try {
         var result = eval(code);
         if (result === undefined) {
@@ -37,6 +36,7 @@
         }
         output.value = result;
       } catch (error) {
+        output.style.display="inline-block";
         output.value = "发生错误：" + error;
       }
     }

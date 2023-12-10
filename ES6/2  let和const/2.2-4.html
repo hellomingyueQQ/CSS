@@ -12,7 +12,7 @@
     console.log(title);
     let title = "火影忍者";
   </textarea>
-  <textarea id="output" rows="10" cols="50" readonly></textarea>
+  <textarea id="output" rows="10" cols="50" readonly style="display: none;"></textarea>
   <br>
   <div id="consoleOutput"></div>
   <script>
@@ -35,6 +35,7 @@
         }
         output.value = result;
       } catch (error) {
+        output.style.display="inline-block";
         output.value = "发生错误：" + error;
       }
     }

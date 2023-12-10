@@ -16,7 +16,7 @@
     }
     console.log(title);
   </textarea>
-  <textarea id="output" rows="10" cols="50" readonly></textarea>
+  <textarea id="output" rows="10" cols="50" readonly style="display: none;"></textarea>
   <br>
   <div id="consoleOutput"></div>
   <script>
@@ -39,6 +39,7 @@
         }
         output.value = result;
       } catch (error) {
+        output.style.display = "inline-block"
         output.value = "发生错误：" + error;
       }
     }

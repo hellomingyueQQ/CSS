@@ -9,7 +9,7 @@
   <button onclick="window.location.href='../../indexForES6.html'">回主页</button> 
   <br>
   <textarea id="codeInput" rows="10" cols="50">document.write(window);</textarea>
-  <textarea id="output" rows="10" cols="50" readonly></textarea>
+  <textarea id="output" rows="10" cols="50" readonly style="display: none;"></textarea>
   <br>
   <div id="consoleOutput"></div>
   <script>
@@ -32,6 +32,7 @@
         }
         output.value = result;
       } catch (error) {
+        output.style.display="inline-block";
         output.value = "发生错误：" + error;
       }
     }
