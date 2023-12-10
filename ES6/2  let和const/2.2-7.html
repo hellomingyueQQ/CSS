@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8" />
   <title></title>
 </head>
+
 <body>
-  <button onclick="runCode()">运行</button> 
-  <button onclick="window.location.href='../../indexForES6.html'">回主页</button> 
+  <h3>ES6中的let</h3>
+  <button onclick="runCode()">运行</button>
+  <button onclick="window.location.href='../../indexForES6.html'">回主页</button>
+  <button onclick="window.location.href='./2.2-6.html'">Previous:</button> 
+  <button onclick="window.location.href='./2.2-8.html'">Next:</button> 
   <br>
   <textarea id="codeInput" rows="10" cols="50">
     let a = 2077;
@@ -20,6 +25,12 @@
   <br>
   <div id="consoleOutput"></div>
   <script>
+
+    let a = 2077;
+    let fn = function () {
+      console.log(2077);
+    };
+
     (function () {
       var consoleOutput = document.getElementById("consoleOutput");
 
@@ -39,13 +50,11 @@
         }
         output.value = result;
       } catch (error) {
-        output.style.display="inline-block";
+        output.style.display = "inline-block";
         output.value = "发生错误：" + error;
       }
     }
   </script>
 </body>
+
 </html>
-
-
-

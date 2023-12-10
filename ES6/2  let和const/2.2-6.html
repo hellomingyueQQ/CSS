@@ -5,8 +5,11 @@
   <title></title>
 </head>
 <body>
+  <h3>ES5中的var</h3>
   <button onclick="runCode()">运行</button> 
   <button onclick="window.location.href='../../indexForES6.html'">回主页</button> 
+  <button onclick="window.location.href='./2.2-5.html'">Previous:</button> 
+  <button onclick="window.location.href='./2.2-7.html'">Next:</button> 
   <br>
   <textarea id="codeInput" rows="10" cols="50">
     var a = 2077;
@@ -20,6 +23,11 @@
   <br>
   <div id="consoleOutput"></div>
   <script>
+    var a = 2077;
+    var fn = function () {
+        console.log(2077);
+    };
+
     (function () {
       var consoleOutput = document.getElementById("consoleOutput");
 
