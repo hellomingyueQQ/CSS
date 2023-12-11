@@ -1,26 +1,68 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
-    <title></title>
-    <script>
-        const person = {
-            _name: "Jack"
-        };
-        Object.defineProperty(person, "name", {
-            get() {
-                return this._name;
-            },
-            set(value) {
-                this._name = value;
-            }
-        });
-        console.log(person.name);
-        person.name = "Lucy";
-        console.log(person.name);
-    </script>
+  <meta charset="utf-8" />
+  <title></title>
 </head>
 <body>
-    
+  <h3></h3>
+  <button onclick="runCode()">运行</button> 
+  <button onclick="window.location.href='../../indexForES6.html'">回主页</button> 
+  <button onclick="window.location.href='./5.10-6.html'">Previous:</button> 
+  <button onclick="window.location.href='./5.10-8.html'">Next:</button> 
+  <br>
+   <div class="HTML-container">
+
+   </div>
+  <br>
+  <textarea id="codeInput" rows="10" cols="80">
+    const person = {
+        _name: "Jack"
+    };
+    Object.defineProperty(person, "name", {
+        get() {
+            return this._name;
+        },
+        set(value) {
+            this._name = value;
+        }
+    });
+    console.log(person.name);
+    person.name = "Lucy";
+    console.log(person.name);
+  </textarea>
+  <textarea id="output" rows="10" cols="50" readonly style="display: none;"></textarea>
+  <br>
+  <div id="consoleOutput"></div>
+  <script>
+    (function () {
+      var consoleOutput = document.getElementById("consoleOutput");
+
+      console.log = function (message) {
+        consoleOutput.innerHTML += message + "<br>";
+      };
+    })();
+
+    function runCode() {
+      var code = document.getElementById("codeInput").value;
+      var output = document.getElementById("output");
+
+      try {
+        var result = eval(code);
+        if (result === undefined) {
+          return;
+        }
+        output.value = result;
+      } catch (error) {
+        output.style.display="inline-block";
+        output.value = "发生错误：" + error;
+      }
+    }
+  </script>
 </body>
 </html>
+
+
+
+
+
