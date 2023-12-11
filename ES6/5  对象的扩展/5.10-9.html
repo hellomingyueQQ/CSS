@@ -1,10 +1,45 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
-    <title></title>
-    <script>
-        window.onload = function() {
+  <meta charset="utf-8" />
+  <title></title>
+</head>
+<body>
+  <h3></h3>
+  <button onclick="runCode()">运行</button> 
+  <button onclick="window.location.href='../../indexForES6.html'">回主页</button> 
+  <button onclick="window.location.href='./5.10-8.html'">Previous:</button> 
+  <button onclick="window.location.href='./5.10-10.html'">Next:</button> 
+  <br>
+   <div class="HTML-container">
+    <input id="txt" type="text" />
+    <p id="content"></p>
+   </div>
+  <br>
+  <textarea id="codeInput" rows="10" cols="80">
+    const oTxt = document.getElementById("txt");
+    const oContent = document.getElementById("content");
+
+    // 定义一个对象
+    const obj = {};
+    Object.defineProperty(obj, "text", {
+        get() { },
+        set(value) {
+            oTxt.value = value;
+            oContent.innerText = value;
+        }
+    });
+
+    // 文本框的keyup事件
+    oTxt.addEventListener("keyup", function(e) {
+        obj.text = e.target.value;
+    }, false);
+  </textarea>
+  <textarea id="output" rows="10" cols="50" readonly style="display: none;"></textarea>
+  <br>
+  <div id="consoleOutput"></div>
+  <script>
+     window.onload = function() {
             const oTxt = document.getElementById("txt");
             const oContent = document.getElementById("content");
 
@@ -23,10 +58,37 @@
                 obj.text = e.target.value;
             }, false);
         }
-    </script>
-</head>
-<body>
-    <input id="txt" type="text" />
-    <p id="content"></p>
+
+
+    (function () {
+      var consoleOutput = document.getElementById("consoleOutput");
+
+      console.log = function (message) {
+        consoleOutput.innerHTML += message + "<br>";
+      };
+    })();
+
+    function runCode() {
+      var code = document.getElementById("codeInput").value;
+      var output = document.getElementById("output");
+
+      try {
+        var result = eval(code);
+        if (result === undefined) {
+          return;
+        }
+        output.value = result;
+      } catch (error) {
+        output.style.display="inline-block";
+        output.value = "发生错误：" + error;
+      }
+    }
+  </script>
 </body>
 </html>
+
+
+
+
+
+
