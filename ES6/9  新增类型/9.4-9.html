@@ -1,19 +1,56 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
-    <title></title>
-    <script>
-        const map = new Map([
-            ["a", 1],
-            ["b", 2],
-            ["c", 3]
-        ]);
-        map.clear();
-        console.log(map);
-    </script>
+  <meta charset="utf-8" />
+  <title></title>
 </head>
 <body>
-    
+  <h3>clear()</h3>
+  <button onclick="runCode()">运行</button> 
+  <button onclick="window.location.href='../../indexForES6.html'">回主页</button> 
+  <button onclick="window.location.href='./9.4-8.html'">Previous:</button> 
+  <button onclick="window.location.href='./9.4-10.html'">Next:</button> 
+  <br>
+   <div class="HTML-container">
+ 
+   </div>
+  <br>
+  <textarea id="codeInput" rows="15" cols="80">
+    const map = new Map([
+    ["a", 1],
+    ["b", 2],
+    ["c", 3]
+    ]);
+    map.clear();
+    console.log(map);
+  </textarea>
+  <textarea id="output" rows="10" cols="50" readonly style="display: none;"></textarea>
+  <br>
+  <div id="consoleOutput"></div>
+  <script>
+    (function () {
+      var consoleOutput = document.getElementById("consoleOutput");
+
+      console.log = function (message) {
+        consoleOutput.innerHTML += message + "<br>";
+      };
+    })();
+
+    function runCode() {
+      var code = document.getElementById("codeInput").value;
+      var output = document.getElementById("output");
+
+      try {
+        var result = eval(code);
+        if (result === undefined) {
+          return;
+        }
+        output.value = result;
+      } catch (error) {
+        output.style.display="inline-block";
+        output.value = "发生错误：" + error;
+      }
+    }
+  </script>
 </body>
 </html>
