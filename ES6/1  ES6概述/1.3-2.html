@@ -7,6 +7,7 @@
 <body>
   <h3>console.log(window)</h3>
   <button onclick="runCode()">运行</button> 
+  <button onclick="document.getElementById('comment').style.display='block'">说明</button> 
   <button onclick="window.location.href='../../indexForES6.html'">回主页</button> 
   <button onclick="window.location.href='./1.3-1.html'">Previous:document.write(window)</button> 
   <br>
@@ -14,6 +15,13 @@
   <textarea id="output" rows="10" cols="50" readonly style="display: none;"></textarea>
   <br>
   <div id="consoleOutput"></div>
+  <div id="comment" style="display: none;">
+    console.log(window) 不会显示 [object Window] 是因为 console.log() 方法在输出对象时会显示对象的属性和方法，而不是简单地将对象转换为字符串。
+
+在浏览器的开发者工具中，console.log() 方法会以树状结构显示对象的属性和方法。于 window 对象，它是浏览器的全局对象，具有许多属性和方法，例如 document、location、alert() 等等。因此，当你在控制台中使用 console.log(window) 时，它会以树状结构显示 window 对象的属性和方法，而不是简单地显示 [object Window]。
+
+这种行为是为了方便开发者查看对象的详细信息，以便进行调试和开发。如果你想要将 window 对象转换为字符串形式，可以使用 console.log(window.toString()) 或者 console.log(String(window))。这样会将 window 对象的字符串形式输出到控制台。
+  </div>
   <script>
 
     function runCode() {
