@@ -1,29 +1,66 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
-    <title></title>
-    <script>
-        // 原对象
-        const person = {
-            name: "Jack",
-            age: 24
-        };
-        // 配置对象
-        const handler = {
-            has(obj, key) {
-                console.log(`${key}属性被in操作`);
-                return key in obj;
-            }
-        };
-
-        // Proxy对象
-        const p = new Proxy(person, handler);
-        console.log("name" in p);
-        console.log("gender" in p);
-    </script>
+  <meta charset="utf-8" />
+  <title></title>
 </head>
 <body>
-    
+  <h3>has()</h3>
+  <button onclick="runCode()">运行</button> 
+  <button onclick="window.location.href='../../indexForES6.html'">回主页</button> 
+  <button onclick="window.location.href='./12.1-6.html'">Previous:</button> 
+  <button onclick="window.location.href='./12.1-8.html'">Next:</button> 
+  <br>
+   <div class="HTML-container">
+   </div>
+  <br>
+  <textarea id="codeInput" rows="20" cols="80">
+    // 原对象
+    const person = {
+        name: "Jack",
+        age: 24
+    };
+    // 配置对象
+    const handler = {
+        has(obj, key) {
+            console.log(`${key}属性被in操作`);
+            return key in obj;
+        }
+    };
+
+    // Proxy对象
+    const p = new Proxy(person, handler);
+    console.log("name" in p);
+    console.log("gender" in p);
+  </textarea>
+  <textarea id="output" rows="10" cols="50" readonly style="display: none;"></textarea>
+  <br>
+  <div id="consoleOutput"></div>
+  <script>
+    (function () {
+      var consoleOutput = document.getElementById("consoleOutput");
+
+      console.log = function (message) {
+        consoleOutput.innerHTML += message + "<br>";
+      };
+    })();
+
+    function runCode() {
+      var code = document.getElementById("codeInput").value;
+      var output = document.getElementById("output");
+
+      try {
+        var result = eval(code);
+        if (result === undefined) {
+          return;
+        }
+        output.value = result;
+      } catch (error) {
+        output.style.display="inline-block";
+        output.value = "发生错误：" + error;
+      }
+    }
+  </script>
 </body>
 </html>
+
