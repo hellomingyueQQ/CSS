@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            column-count: 1;
+            margin-top: 5px;
+        }
+
+        .method {
+            vertical-align: top;
+        }
+
+        table {
+            margin-bottom: 10px;
+            border-collapse: collapse;
+            /* 合并相邻边框 */
+        }
+
+        table,
+        tr,
+        td,
+        th {
+            border: 1px solid silver;
+        }
+
+        tr td:nth-child(1) {
+            width: 240px;
+        }
+
+        tr td:nth-child(2) {
+            width: 350px;
+        }
+
+        caption{
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <header style="text-align: center;font-weight: bold;margin: 5px;">前端汇总</header>
+    <div class="container">
+        <div class="method">
+            <table>
+                <caption>字符串方法</caption>
+                <tbody>
+                    <tr>
+                        <td>includes()</td>
+                        <td>是否包含某个字符串</td>
+                    </tr>
+                    <tr>
+                        <td>startsWith()</td>
+                        <td>是否以某个字符串开头</td>
+                    </tr>
+                    <tr>
+                        <td>endsWith(n)</td>
+                        <td>是否以某个字符串结尾</td>
+                    </tr>
+                    <tr>
+                        <td>repeat()</td>
+                        <td>对某个字符串进行重复</td>
+                    </tr>
+                    <tr>
+                        <td>trim()</td>
+                        <td>去除首尾空格</td>
+                    </tr>
+                    <tr>
+                        <td>trimStart()</td>
+                        <td>去除开头的空格</td>
+                    </tr>
+                    <tr>
+                        <td>trimEnd()</td>
+                        <td>去除结尾的空格</td>
+                    </tr>
+                    <tr>
+                        <td>padStart()</td>
+                        <td>在开头进行填充</td>
+                    </tr>
+                    <tr>
+                        <td>padEnd()</td>
+                        <td>在结尾进行填充</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+  
+    </div>
+</body>
+
+</html>
