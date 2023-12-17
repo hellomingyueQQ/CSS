@@ -25,6 +25,10 @@
   <br>
   <div id="consoleOutput"></div>
   <script>
+    const arr = [1, [2, [3]], 4, 5];
+    console.log(arr.flat(1));
+    console.log(arr.flat(2));
+    console.log(arr.flat(Infinity));
     (function () {
       var consoleOutput = document.getElementById("consoleOutput");
 
