@@ -7,6 +7,7 @@
 <body>
   <h3>var循环变量泄露为全局变量</h3>
   <button onclick="runCode()">运行</button> 
+  <button onclick="document.getElementById('comment').style.display='block'">说明</button> 
   <button onclick="window.location.href='../../indexForES6.html'">回主页</button> 
   <button onclick="window.location.href='./2.2-7.html'">Previous:</button> 
   <button onclick="window.location.href='./2.2-9.html'">Next:</button> 
@@ -32,6 +33,14 @@
   <textarea id="output" rows="10" cols="50" readonly style="display: none;"></textarea>
   <br>
   <div id="consoleOutput"></div>
+  <div id="comment" style="display: none;">
+      <ol>
+        <li>一个变量在当前作用域没有定义，但被使用了</li>
+        <li>（定义的地方）向上级作用域，一层一层一次寻找，直到找到为止</li>
+        <li>如果全局作用域都没有找到，则报错xx is not defined</li>
+      </ol>
+       <div>当前代码没有闭包</div>
+  </div>
   <script>
     (function () {
       var consoleOutput = document.getElementById("consoleOutput");
