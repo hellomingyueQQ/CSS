@@ -14,13 +14,18 @@
 
    </div>
   <br>
-  <textarea id="codeInput" rows="10" cols="80">
+  <textarea id="codeInput" rows="15" cols="80">
     const foo = "foo";
     const bar = "bar";
     const obj = { foo: foo, bar: bar };
 
     console.log(obj.foo);
     console.log(obj.bar);
+
+    // 简写形式
+    const simple = {foo,bar};
+    console.log(simple.foo);
+    console.log(simple.bar);
   </textarea>
   <textarea id="output" rows="10" cols="50" readonly style="display: none;"></textarea>
   <br>
