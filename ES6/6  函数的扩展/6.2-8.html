@@ -5,7 +5,7 @@
   <title></title>
 </head>
 <body>
-  <h3>ES6</h3>
+  <h3>箭头函数简化代码：ES6 forEach</h3>
   <button onclick="runCode()">运行</button> 
   <button onclick="window.location.href='../../indexForES6.html'">回主页</button> 
   <button onclick="window.location.href='./6.2-7.html'">Previous:</button> 
@@ -17,8 +17,9 @@
   <br>
   <textarea id="codeInput" rows="15" cols="80">
     const arr = ["red", "green", "blue"];
-    arr.forEach((value) => {
-        console.log(value);
+    
+    arr.forEach((value)=>{
+      console.log(value);
     });
   </textarea>
   <textarea id="output" rows="10" cols="50" readonly style="display: none;"></textarea>
