@@ -6,6 +6,7 @@
 </head>
 <body>
   <h3>数组</h3>
+  <button onclick="runCode()">运行</button> 
   <button onclick="window.location.href='../../indexForES6.html'">回主页</button> 
   <button onclick="window.location.href='./8.2-1.html'">Previous:</button> 
   <button onclick="window.location.href='./8.2-3.html'">Next:</button> 
@@ -20,9 +21,6 @@
     console.log(arg1);
     console.log(arg2);
   </textarea>
-  <textarea id="output" rows="10" cols="50" readonly style="display: none;"></textarea>
-  <br>
-  <div id="consoleOutput"></div>
   <script>
       const arr = ["red", "green", "blue"];
     const [arg1, ...arg2] = arr;
