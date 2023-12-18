@@ -5,25 +5,27 @@
   <title></title>
 </head>
 <body>
-  <h3>set()</h3>
+  <h3>variable object</h3>
   <button onclick="runCode()">运行</button> 
-  <button onclick="window.location.href='../../indexForES6.html'">回主页</button> 
-  <button onclick="window.location.href='./9.4-3.html'">Previous:</button> 
-  <button onclick="window.location.href='./9.4-5.html'">Next:</button> 
+  <button onclick="window.location.href='../../indexForOOD.html'">回主页</button> 
+  <button onclick="window.location.href='./001.html'">Previous:</button> 
+  <button onclick="window.location.href='./003.html'">Next:</button> 
   <br>
    <div class="HTML-container">
- 
    </div>
+   <img src="./images/002.PNG" alt="">
   <br>
   <textarea id="codeInput" rows="15" cols="80">
-    const map = new Map([
-    ["a", 1],
-    ["b", 2],
-    ["c", 3]
-    ]);
-    map.set("d", 4);
-    map.set("e", 5);
-    console.log(map);
+    var color1 = "red";
+    var color2 = color1;
+
+    console.log(color1); // "red"
+    console.log(color2); // "red"
+
+    color1 = "blue";
+    
+    console.log(color1); // "blue"
+    console.log(color2); // "red"
   </textarea>
   <script>
     function runCode() {
