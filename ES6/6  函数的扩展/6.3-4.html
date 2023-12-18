@@ -7,6 +7,7 @@
 <body>
   <h3>举例2</h3>
   <button onclick="runCode()">运行</button> 
+  <button onclick="document.getElementById('comment').style.display='block'">说明</button> 
   <button onclick="window.location.href='../../indexForES6.html'">回主页</button> 
   <button onclick="window.location.href='./6.3-3.html'">Previous:</button> 
   <button onclick="window.location.href='./6.4-1.html'">Next:</button> 
@@ -28,6 +29,9 @@
     const ball2 = new Ball(20, "green", 2);
     console.log(ball2.color);
   </textarea>
+  <div id="comment" style="display: none;">
+    如果一个函数的部分参数有默认值，部分参数没有默认值，那么有默认值的参数应该放在后面
+  </div>
   <textarea id="output" rows="10" cols="50" readonly style="display: none;"></textarea>
   <br>
   <div id="consoleOutput"></div>
