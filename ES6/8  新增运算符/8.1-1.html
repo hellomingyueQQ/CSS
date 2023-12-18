@@ -23,18 +23,15 @@
     console.log(...arr);
     console.log(...obj);
   </textarea>
-  <textarea id="output" rows="10" cols="50" readonly style="display: none;"></textarea>
-  <br>
-  <div id="consoleOutput"></div>
+
   <script>
-    (function () {
-      var consoleOutput = document.getElementById("consoleOutput");
-
-      console.log = function (message) {
-        consoleOutput.innerHTML += message + "<br>";
-      };
-    })();
-
+    const arr = [1, 2, 3];
+    const obj = {
+        name: "Jack",
+        age: 24
+    }
+    console.log(...arr);
+    console.log(...obj);
     function runCode() {
       var code = document.getElementById("codeInput").value;
       var output = document.getElementById("output");

@@ -25,13 +25,10 @@
   <br>
   <div id="consoleOutput"></div>
   <script>
-    (function () {
-      var consoleOutput = document.getElementById("consoleOutput");
-
-      console.log = function (message) {
-        consoleOutput.innerHTML += message + "<br>";
-      };
-    })();
+    function fn(...args) {
+        console.log(args);
+    }
+    fn(1, 2, 3);
 
     function runCode() {
       var code = document.getElementById("codeInput").value;

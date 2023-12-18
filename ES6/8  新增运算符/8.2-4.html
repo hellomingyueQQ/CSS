@@ -28,13 +28,13 @@
   <br>
   <div id="consoleOutput"></div>
   <script>
-    (function () {
-      var consoleOutput = document.getElementById("consoleOutput");
+    function fn(a, b, ...args) {
+        console.log(args);
+    }
 
-      console.log = function (message) {
-        consoleOutput.innerHTML += message + "<br>";
-      };
-    })();
+    fn(1, 2, 3);
+    fn(1, 2, 3, 4);
+    fn(1, 2, 3, 4, 5);
 
     function runCode() {
       var code = document.getElementById("codeInput").value;

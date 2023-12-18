@@ -24,7 +24,9 @@
         color: "red"
     }
     const result = { ...obj1, ...obj2 };
-    console.log(result);
+    Object.entries(result).forEach(x=>{
+      console.log(x[0] + ": " + x[1]);
+    });
   </textarea>
   <textarea id="output" rows="10" cols="50" readonly style="display: none;"></textarea>
   <br>

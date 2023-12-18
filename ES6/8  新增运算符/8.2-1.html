@@ -23,7 +23,9 @@
     };
 
     const { age, ...msg } = person;
-    console.log(msg);
+    Object.entries(msg).forEach(x=>{
+      console.log(x[0] + ": " + x[1]);
+    });
   </textarea>
   <textarea id="output" rows="10" cols="50" readonly style="display: none;"></textarea>
   <br>
