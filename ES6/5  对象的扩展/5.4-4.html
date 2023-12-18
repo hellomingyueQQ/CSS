@@ -21,7 +21,9 @@
     const obj3 = { b: 5, f: 6 };
 
     Object.assign(obj1, obj2, obj3);
-    console.log(obj1);
+    Object.entries(obj1).forEach(x=>{
+      console.log(x[0] + ": " + x[1]);
+    });
   </textarea>
   <textarea id="output" rows="10" cols="50" readonly style="display: none;"></textarea>
   <br>
