@@ -28,7 +28,9 @@
         if (price) {
             Object.assign(options, { price });
         }
-        console.log(options);
+        Object.entries(options).forEach(x=>{
+          console.log(x[0] + ": " + x[1]);
+        });
         // 接下来可以使用options作为查询数据库的条件
     }
 

@@ -15,18 +15,24 @@
     
    </div>
   <br>
-  <textarea id="codeInput" rows="15" cols="80">
-    // 函数声明
-    function fn1() {
-        console.log("绿叶学习网");
-    }
+  <textarea id="codeInput" rows="22" cols="80">
+    // 0个参数
+    const fn1 = ()=>{
+      console.log("绿叶学习网");
+    };
     fn1();
 
-    // 函数表达式
-    const fn2 = function () {
-        console.log("绿叶学习网");
+    // 1个参数
+    const fn2 =  (a) => {
+      console.log(`绿叶学习网: ${a}`);
     };
-    fn2();
+    fn2("HTML");
+
+    // n个参数
+    const fn3 =  (a,b,c) => {
+      console.log(`绿叶学习网: ${a}, ${b}, ${c}`);
+    };
+    fn2("HTML", "CSS", "Javascript");
   </textarea>
   <textarea id="output" rows="10" cols="50" readonly style="display: none;"></textarea>
   <br>

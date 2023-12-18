@@ -20,7 +20,9 @@
         Object.assign(this, { name, gender, age });
     }
     const p = new Person("Jack", 24, "male");
-    console.log(p);
+    Object.entries(p).forEach(x=>{
+      console.log(x[0] + ": " + x[1]);
+    });
   </textarea>
   <textarea id="output" rows="10" cols="50" readonly style="display: none;"></textarea>
   <br>

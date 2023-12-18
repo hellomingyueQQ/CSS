@@ -15,7 +15,7 @@
 
    </div>
   <br>
-  <textarea id="codeInput" rows="10" cols="80">
+  <textarea id="codeInput" rows="15" cols="80">
     const person = {
         name: "Jack",
         gender: "男"
@@ -23,7 +23,9 @@
 
     Object.freeze(person);
     person.age = 24;
-    console.log(person);
+    Object.entries(person).forEach(x=>{
+      console.log(x[0] + ": " + x[1]);
+    });
   </textarea>
   <textarea id="output" rows="10" cols="50" readonly style="display: none;"></textarea>
   <br>

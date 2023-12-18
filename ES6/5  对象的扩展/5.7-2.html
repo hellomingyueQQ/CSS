@@ -5,7 +5,7 @@
   <title></title>
 </head>
 <body>
-  <h3>例子2</h3>
+  <h3>Object.fromEntries()-例子2</h3>
   <button onclick="runCode()">运行</button> 
   <button onclick="window.location.href='../../indexForES6.html'">回主页</button> 
   <button onclick="window.location.href='./5.7-1.html'">Previous:</button> 
@@ -15,7 +15,7 @@
 
    </div>
   <br>
-  <textarea id="codeInput" rows="15" cols="80">
+  <textarea id="codeInput" rows="20" cols="80">
     const obj1 = {
         a: 1,
         b: 2,
@@ -28,7 +28,9 @@
         return [key, value * 3];
     })
     const obj2 = Object.fromEntries(arr);
-    console.log(obj2);
+    Object.entries(obj2).forEach(x=>{
+      console.log(x[0] + ": " + x[1]);
+    });
   </textarea>
   <textarea id="output" rows="10" cols="50" readonly style="display: none;"></textarea>
   <br>

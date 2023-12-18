@@ -5,7 +5,7 @@
   <title></title>
 </head>
 <body>
-  <h3>例子1</h3>
+  <h3>Object.fromEntries()-例子1</h3>
   <button onclick="runCode()">运行</button> 
   <button onclick="window.location.href='../../indexForES6.html'">回主页</button> 
   <button onclick="window.location.href='./5.6-1.html'">Previous:</button> 
@@ -26,7 +26,10 @@
         ["name", "Jack"],
         ["age", 24]
     ];
-    console.log(Object.fromEntries(arr));
+    var result = Object.fromEntries(arr);
+    Object.entries(result).forEach(x=>{
+      console.log(x[0] + ": " + x[1]);
+    });
   </textarea>
   <textarea id="output" rows="10" cols="50" readonly style="display: none;"></textarea>
   <br>
