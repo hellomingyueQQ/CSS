@@ -1,3 +1,1 @@
-Chrome的调试工具确实是王道 :)补充2个，主要是关于性能优化的：1. Profiles，可以记录JS函数和CSS选择器对CPU的占用，以及内存占用时间线。用来找出影响性能的瓶颈非常有帮助。2. Timeline，可以记录浏览器渲染的每一帧里发生了什么，从js执行，css reflow到画面repaint，各自占用多少时间。可以帮助你定位是什么导致动态效果的帧数不流畅。
-——————————
-CSS多写就不提了，很多都是细节经验的积累。值得研究一下的有选择器的优先级 (http://www.w3.org/TR/CSS2/selector.html)，CSS3的新属性等等真正的CSS进阶关注的和其他编程是类似的，就是如何让你的CSS有更好的结构，更容易阅读和维护，这在大型项目里面比较重要。可以研究下LESS (http://lesscss.org) /SASS (http://sass-lang.com) 这样的预处理器，以及基于预处理器的模块化CSS框架，比如Bootstrap (http://twitter.github.com/bootstrap)Compass (http://compass-style.org)SMACSS (http://smacss.com)兼容性方面，英语好的话建议去看看QuirksMode (http://www.quirksmode.org)最后，光会html和css很难找到饭吃。你要么得是会html/css的设计师，要么得是会javascript的前端。上面提到的进阶内容，也需要有传统编程基础。
+
