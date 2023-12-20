@@ -35,17 +35,9 @@
     const p = new Proxy(person, handler);
     const name = p.name;
   </textarea>
-  <textarea id="output" rows="10" cols="50" readonly style="display: none;"></textarea>
-  <br>
-  <div id="consoleOutput"></div>
-  <script>
-    (function () {
-      var consoleOutput = document.getElementById("consoleOutput");
 
-      console.log = function (message) {
-        consoleOutput.innerHTML += message + "<br>";
-      };
-    })();
+  <script>
+ 
 
     function runCode() {
       var code = document.getElementById("codeInput").value;

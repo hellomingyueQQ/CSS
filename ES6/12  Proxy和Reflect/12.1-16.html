@@ -41,13 +41,23 @@
   <br>
   <div id="consoleOutput"></div>
   <script>
-    (function () {
-      var consoleOutput = document.getElementById("consoleOutput");
+   const oTxt = document.getElementById("txt");
+    const oContent = document.getElementById("content");
 
-      console.log = function (message) {
-        consoleOutput.innerHTML += message + "<br>";
-      };
-    })();
+    // 定义一个对象
+    const obj = {};
+    Object.defineProperty(obj, "text", {
+        get() { },
+        set(value) {
+            oTxt.value = value;
+            oContent.innerText = value;
+        }
+    });
+
+    // 文本框的keyup事件
+    oTxt.addEventListener("keyup", function(e) {
+        obj.text = e.target.value;
+    }, false);
 
     function runCode() {
       var code = document.getElementById("codeInput").value;

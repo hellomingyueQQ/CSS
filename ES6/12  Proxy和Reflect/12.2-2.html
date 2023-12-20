@@ -22,7 +22,8 @@
         age: 24
     };
     delete person1.name;
-    console.log(person1);
+    console.log(person1.name);
+    console.log(person1.age);
 
     // Reflect
     const person2 = {
@@ -30,7 +31,8 @@
         age: 24
     };
     Reflect.deleteProperty(person2, "name");
-    console.log(person2);
+    console.log(person2.name);
+    console.log(person2.age);
   </textarea>
   <textarea id="output" rows="10" cols="50" readonly style="display: none;"></textarea>
   <br>

@@ -47,13 +47,30 @@
   <br>
   <div id="consoleOutput"></div>
   <script>
-    (function () {
-      var consoleOutput = document.getElementById("consoleOutput");
+     const oTxt = document.getElementById("txt");
+    const oContent = document.getElementById("content");
 
-      console.log = function (message) {
-        consoleOutput.innerHTML += message + "<br>";
-      };
-    })();
+    // 原对象
+    const obj = {};
+    // 配置对象
+    const handler = {
+        get(obj, key, proxy) {
+            return obj[key];
+        },
+        set(obj, key, value) {
+            if(key === "text") {
+                oTxt.value = value;
+                oContent.innerText = value;
+                obj[key] = value;
+            }
+        }
+    };
+    const p = new Proxy(obj, handler);
+
+    // 文本框的keyup事件
+    oTxt.addEventListener("keyup", function(e) {
+        p.text = e.target.value;
+    }, false);
 
     function runCode() {
       var code = document.getElementById("codeInput").value;

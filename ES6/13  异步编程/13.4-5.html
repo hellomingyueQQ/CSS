@@ -15,7 +15,7 @@
    <div class="HTML-container">
    </div>
   <br>
-  <textarea id="codeInput" rows="25" cols="80">
+  <textarea id="codeInput" rows="20" cols="80">
     // 创建一个Image对象
     const img = new Image();
     img.src = "img/logo.png";
@@ -36,13 +36,7 @@
   <br>
   <div id="consoleOutput"></div>
   <script>
-    (function () {
-      var consoleOutput = document.getElementById("consoleOutput");
 
-      console.log = function (message) {
-        consoleOutput.innerHTML += message + "<br>";
-      };
-    })();
 
     function runCode() {
       var code = document.getElementById("codeInput").value;
