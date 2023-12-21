@@ -22,7 +22,17 @@
     console.log(undefined == null); // true
     console.log(undefined === null); // false
   </textarea>
+  <textarea id="output" rows="10" cols="50" readonly style="display: none;"></textarea>
+  <br>
+  <div id="consoleOutput"></div>
   <script>
+      (function () {
+      var consoleOutput = document.getElementById("consoleOutput");
+
+      console.log = function (message) {
+        consoleOutput.innerHTML += message + "<br>";
+      };
+    })();
     function runCode() {
       var code = document.getElementById("codeInput").value;
       var output = document.getElementById("output");
