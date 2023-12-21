@@ -6,31 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <h3>Objects Literals</h3>
+    <h3>Property Access</h3>
     <button onclick="runCode()">运行</button>
     <button onclick="window.location.href='../../indexForOOD.html'">回主页</button>
-    <button onclick="window.location.href='./010.html'">Previous:</button>
-    <button onclick="window.location.href='./012.html'">Next:</button>
+    <button onclick="window.location.href='./014.html'">Previous:</button>
+    <button onclick="window.location.href='./016.html'">Next:</button>
     <br>
     <div class="HTML-container">
     </div>
     <br>
-    <textarea id="codeInput" rows="15" cols="80">
-        var book = {
-            name: "The Principles of Object-Oriented JavaScript",
-            year: 2014
-           };
-           
-        // You can also use string literals as property names
-        var book = {
-        "name": "The Principles of Object-Oriented JavaScript",
-        "year": 2014
-        };
-        
-        // This example is equivalent to the previous one despite the syntactic differences
-        var book = new Object();
-        book.name = "The Principles of Object-Oriented JavaScript";
-        book.year = 2014;
+    <textarea id="codeInput" rows="5" cols="80">
+        var array = [];
+        array.push(12345);
+
+        var array = [];
+        array["push"](12345);
+
+        var array = [];
+        var method = "push";
+        array[method](12345);
   </textarea>
     <textarea id="output" rows="10" cols="50" readonly style="display: none;"></textarea>
     <br>
