@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <h3><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <h3></h3>
+    <button onclick="runCode()">运行</button>
+    <button onclick="window.location.href='../../indexForOOD.html'">回主页</button>
+    <button onclick="window.location.href='./058.html'">Previous:</button>
+    <button onclick="window.location.href='./060.html'">Next:</button>
+    <br>
+    <div class="HTML-container">
+    </div>
+    <br>
+    <textarea id="codeInput" rows="5" cols="80">
+
+  </textarea>
+    <textarea id="output" rows="10" cols="50" readonly style="display: none;"></textarea>
+    <br>
+    <div id="consoleOutput"></div>
+    <script>
+        (function () {
+            var consoleOutput = document.getElementById("consoleOutput");
+
+            console.log = function (message) {
+                consoleOutput.innerHTML += message + "<br>";
+            };
+        })();
+
+        function runCode() {
+            var code = document.getElementById("codeInput").value;
+            var output = document.getElementById("output");
+
+            try {
+                var result = eval(code);
+                if (result === undefined) {
+                    return;
+                }
+                output.value = result;
+            } catch (error) {
+                output.style.display = "inline-block";
+                output.value = "发生错误：" + error;
+            }
+        }
+    </script>
+</body>
+</html>
