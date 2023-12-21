@@ -6,34 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-  <h3>Comparing Without Coercion [kəʊˈəːʃ(ə)n] 类型转换</h3>
+  <h3>Two variables pointing to one object</h3>
   <button onclick="runCode()">运行</button> 
   <button onclick="window.location.href='../../indexForOOD.html'">回主页</button> 
-  <button onclick="window.location.href='./004.html'">Previous:</button> 
-  <button onclick="window.location.href='./006.html'">Next:</button> 
+  <button onclick="window.location.href='./006.html'">Previous:</button> 
+  <button onclick="window.location.href='./008.html'">Next:</button> 
   <br>
    <div class="HTML-container">
    </div>
+   <img src="./images/003.PNG" alt="">
   <br>
-  <textarea id="codeInput" rows="8" cols="80">
-    
-    console.log("5" == 5); // true
-    console.log("5" === 5); // false
-
-    console.log(undefined == null); // true
-    console.log(undefined === null); // false
+  <textarea id="codeInput" rows="05" cols="80">
+    var object1 = new Object();
+    var object2 = object1;
   </textarea>
-  <textarea id="output" rows="10" cols="50" readonly style="display: none;"></textarea>
-  <br>
-  <div id="consoleOutput"></div>
   <script>
-      (function () {
-      var consoleOutput = document.getElementById("consoleOutput");
-
-      console.log = function (message) {
-        consoleOutput.innerHTML += message + "<br>";
-      };
-    })();
     function runCode() {
       var code = document.getElementById("codeInput").value;
       var output = document.getElementById("output");
