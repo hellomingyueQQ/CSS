@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <h3></h3>
+    <h3>Built-in Object Prototypes</h3>
     <button onclick="runCode()">运行</button>
     <button onclick="window.location.href='../../indexForOOD.html'">回主页</button>
     <button onclick="window.location.href='./068.html'">Previous:</button>
@@ -15,8 +15,21 @@
     <div class="HTML-container">
     </div>
     <br>
-    <textarea id="codeInput" rows="5" cols="80">
+    <textarea id="codeInput" rows="15" cols="80">
+        Array.prototype.sum = function () {
+            return this.reduce(function (previous, current) {
+                return previous + current;
+            });
+        };
+        var numbers = [1, 2, 3, 4, 5, 6];
+        var result = numbers.sum();
+        console.log(result); // 21
 
+        String.prototype.capitalize = function () {
+            return this.charAt(0).toUpperCase() + this.substring(1);
+        };
+        var message = "hello world!";
+        console.log(message.capitalize()); // "Hello world!"
   </textarea>
     <textarea id="output" rows="10" cols="50" readonly style="display: none;"></textarea>
     <br>

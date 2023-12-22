@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <h3></h3>
+    <h3>identify a prototype property</h3>
     <button onclick="runCode()">运行</button>
     <button onclick="window.location.href='../../indexForOOD.html'">回主页</button>
     <button onclick="window.location.href='./057.html'">Previous:</button>
@@ -15,8 +15,13 @@
     <div class="HTML-container">
     </div>
     <br>
-    <textarea id="codeInput" rows="5" cols="80">
-
+    <textarea id="codeInput" rows="10" cols="80">
+        function hasPrototypeProperty(object, name) {
+            return name in object && !object.hasOwnProperty(name);
+        }
+        
+        console.log(hasPrototypeProperty(book, "title")); // false
+        console.log(hasPrototypeProperty(book, "hasOwnProperty")); // true
   </textarea>
     <textarea id="output" rows="10" cols="50" readonly style="display: none;"></textarea>
     <br>
