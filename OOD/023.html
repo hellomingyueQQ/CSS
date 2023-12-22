@@ -6,15 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <h3><!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8" />
-    <title></title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
-    <h3></h3>
+    <h3>Function declarations are hoisted to the top of the context</h3>
     <button onclick="runCode()">运行</button>
     <button onclick="window.location.href='../../indexForOOD.html'">回主页</button>
     <button onclick="window.location.href='./022.html'">Previous:</button>
@@ -23,7 +15,18 @@
     <div class="HTML-container">
     </div>
     <br>
-    <textarea id="codeInput" rows="5" cols="80">
+    <textarea id="codeInput" rows="15" cols="80">
+        var result = add(5, 5);
+        function add(num1, num2) {
+          return num1 + num2;
+        }
+
+        // how the JavaScript engine interprets the code
+        function add(num1, num2) {
+        return num1 + num2;
+        }
+        var result = add(5, 5);
+
 
   </textarea>
     <textarea id="output" rows="10" cols="50" readonly style="display: none;"></textarea>

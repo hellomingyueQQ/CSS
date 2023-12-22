@@ -6,15 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <h3><!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8" />
-    <title></title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
-    <h3></h3>
+    <h3>Overloading</h3>
     <button onclick="runCode()">运行</button>
     <button onclick="window.location.href='../../indexForOOD.html'">回主页</button>
     <button onclick="window.location.href='./026.html'">Previous:</button>
@@ -23,8 +15,16 @@
     <div class="HTML-container">
     </div>
     <br>
-    <textarea id="codeInput" rows="5" cols="80">
+    <textarea id="codeInput" rows="10" cols="80">
+        function sayMessage(message) {
+            console.log(message);
+        }
+        
+        function sayMessage() {
+            console.log("Default message");
+        }
 
+        sayMessage("Hello!"); // outputs "Default message"
   </textarea>
     <textarea id="output" rows="10" cols="50" readonly style="display: none;"></textarea>
     <br>
