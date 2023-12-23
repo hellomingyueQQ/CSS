@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <h3></h3>
+    <h3>Object inheriance example</h3>
     <button onclick="runCode()">运行</button>
     <button onclick="window.location.href='../../indexForOOD.html'">回主页</button>
     <button onclick="window.location.href='./073.html'">Previous:</button>
@@ -14,9 +14,28 @@
     <br>
     <div class="HTML-container">
     </div>
+    <img src="./images/009.PNG" alt="">
     <br>
-    <textarea id="codeInput" rows="5" cols="80">
-
+    <textarea id="codeInput" rows="25" cols="80">
+        var person1 = {
+            name: "Nicholas",
+            sayName: function () {
+                console.log(this.name);
+            }
+        };
+        var person2 = Object.create(person1, {
+            name: {
+                configurable: true,
+                enumerable: true,
+                value: "Greg",
+                writable: true
+            }
+        });
+        person1.sayName(); // outputs "Nicholas"
+        person2.sayName(); // outputs "Greg"
+        console.log(person1.hasOwnProperty("sayName")); // true
+        console.log(person1.isPrototypeOf(person2)); // true
+        console.log(person2.hasOwnProperty("sayName")); // false   
   </textarea>
     <textarea id="output" rows="10" cols="50" readonly style="display: none;"></textarea>
     <br>

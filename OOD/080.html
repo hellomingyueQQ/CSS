@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <h3></h3>
+    <h3>Accessing Supertype Methods</h3>
     <button onclick="runCode()">运行</button>
     <button onclick="window.location.href='../../indexForOOD.html'">回主页</button>
     <button onclick="window.location.href='./079.html'">Previous:</button>
@@ -15,8 +15,34 @@
     <div class="HTML-container">
     </div>
     <br>
-    <textarea id="codeInput" rows="5" cols="80">
-
+    <textarea id="codeInput" rows="30" cols="80">
+        function Rectangle(length, width) {
+            this.length = length;
+            this.width = width;
+        }
+        Rectangle.prototype.getArea = function () {
+            return this.length * this.width;
+        };
+        Rectangle.prototype.toString = function () {
+            return "[Rectangle " + this.length + "x" + this.height + "]";
+        };
+        // inherits from Rectangle
+        function Square(size) {
+            Rectangle.call(this, size, size);
+        }
+        Square.prototype = Object.create(Rectangle.prototype, {
+            constructor: {
+                configurable: true,
+                enumerable: true,
+                value: Square,
+                writable: true
+            }
+        });
+        // call the supertype method
+        Square.prototype.toString = function () {
+            var text = Rectangle.prototype.toString.call(this);
+            return text.replace("Rectangle", "Square");
+        };
   </textarea>
     <textarea id="output" rows="10" cols="50" readonly style="display: none;"></textarea>
     <br>

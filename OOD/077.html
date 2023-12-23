@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <h3></h3>
+    <h3>Change the prototype</h3>
     <button onclick="runCode()">运行</button>
     <button onclick="window.location.href='../../indexForOOD.html'">回主页</button>
     <button onclick="window.location.href='./076.html'">Previous:</button>
@@ -14,9 +14,40 @@
     <br>
     <div class="HTML-container">
     </div>
+    <img src="./images/010.PNG" alt="">
     <br>
     <textarea id="codeInput" rows="5" cols="80">
-
+        function Rectangle(length, width) {
+            this.length = length;
+            this.width = width;
+        }
+        Rectangle.prototype.getArea = function () {
+            return this.length * this.width;
+        };
+        Rectangle.prototype.toString = function () {
+            return "[Rectangle " + this.length + "x" + this.width + "]";
+        };
+        // inherits from Rectangle
+        function Square(size) {
+            this.length = size;
+            this.width = size;
+        }
+        Square.prototype = new Rectangle();
+        Square.prototype.constructor = Square;
+        Square.prototype.toString = function () {
+            return "[Square " + this.length + "x" + this.width + "]";
+        };
+        var rect = new Rectangle(5, 10);
+        var square = new Square(6);
+        console.log(rect.getArea()); // 50
+        console.log(square.getArea()); // 36
+        console.log(rect.toString()); // "[Rectangle 5x10]"
+        console.log(square.toString()); // "[Square 6x6]"
+        console.log(rect instanceof Rectangle); // true
+        console.log(rect instanceof Object); // true
+        console.log(square instanceof Square); // true
+        console.log(square instanceof Rectangle); // true
+        console.log(square instanceof Object); // true
   </textarea>
     <textarea id="output" rows="10" cols="50" readonly style="display: none;"></textarea>
     <br>
