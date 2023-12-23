@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <h3></h3>
+    <h3>add event support</h3>
     <button onclick="runCode()">运行</button>
     <button onclick="window.location.href='../../indexForOOD.html'">回主页</button>
     <button onclick="window.location.href='./086.html'">Previous:</button>
@@ -15,8 +15,57 @@
     <div class="HTML-container">
     </div>
     <br>
-    <textarea id="codeInput" rows="5" cols="80">
+    <textarea id="codeInput" rows="45" cols="80">
+        function EventTarget() {
+        }
+        EventTarget.prototype = {
+            constructor: EventTarget,
+            addListener: function (type, listener) {
+                // create an array if it doesn't exist
+                if (!this.hasOwnProperty("_listeners")) {
+                    this._listeners = [];
+                }
+                if (typeof this._listeners[type] == "undefined") {
+                    this._listeners[type] = [];
+                }
+                this._listeners[type].push(listener);
+            },
+            fire: function (event) {
+        
+                if (!event.target) {
+                    event.target = this;
+                }
+                if (!event.type) { // falsy
+                    throw new Error("Event object missing 'type' property.");
+                }
+                if (this._listeners && this._listeners[event.type] instanceof Array) {
+                    var listeners = this._listeners[event.type];
+                    for (var i = 0, len = listeners.length; i < len; i++) {
+                        listeners[i].call(this, event);
+                    }
+                }
+            },
+            removeListener: function (type, listener) {
+                if (this._listeners && this._listeners[type] instanceof Array) {
+                    var listeners = this._listeners[type];
+                    for (var i = 0, len = listeners.length; i < len; i++) {
+                        if (listeners[i] === listener) {
+                            listeners.splice(i, 1);
+                            break;
+                        }
+                    }
+                }
+            }
+        };
 
+        var target = new EventTarget();
+        target.addListener("message", function (event) {
+            console.log("Message is " + event.data);
+        })
+        target.fire({
+            type: "message",
+            data: "Hello world!"
+        });
   </textarea>
     <textarea id="output" rows="10" cols="50" readonly style="display: none;"></textarea>
     <br>
