@@ -1,0 +1,2 @@
+bom 对象window，dom对象 document，他们都是顶级对象
+chrome里面也实现了global globalThis，它俩是一样的

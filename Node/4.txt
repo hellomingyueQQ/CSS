@@ -1,0 +1,3 @@
+utf-8一个中文占三个字节
+byte的数据如果超过八位，多出来的位将被舍弃
+utf-8是unicode字符集的实现方式，unicode兼容ascii码

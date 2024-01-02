@@ -1,0 +1,3 @@
+dir /s 查看所有文件
+ctrl + C停止
+vs code选中文件右键terminal
