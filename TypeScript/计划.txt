@@ -1,0 +1,12 @@
+输入：
+        尚硅谷视频
+
+
+搭建环境：
+      1. 建立ts文件，直接命令行 tsc xxx.ts,生成js
+
+
+目标：
+     尚硅谷第二个阶段是屁，使用tsconfig来编译ts为js
+然后回到essential typescript看代码
+看中文网视频，敲代码
