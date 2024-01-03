@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/rxjs/7.3.0/rxjs.umd.js"></script>
+
+</head>
+
+<body>
+    <button>点击</button>
+    <script>
+        console.log(rxjs);
+        const { fromEvent } = rxjs;
+        var button = document.querySelector('button');
+        rxjs.fromEvent(button, 'click')
+            .subscribe(() => console.log('Clicked!'));
+    </script>
+</body>
+
+</html>
