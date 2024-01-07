@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         .container {
-            column-count: 1;
+            column-count: 3;
             margin-top: 5px;
         }
 
@@ -146,6 +146,218 @@
                         <td>同时遍历key和value</td>
                     </tr>
       
+                </tbody>
+            </table>
+        </div>
+
+        <div class="method">
+            <table>
+                <caption>对象的扩展</caption>
+                <tbody>
+                    <tr>
+                        <td>Object.is()</td>
+                        <td>判断两个值是否相等</td>
+                    </tr>
+                    <tr>
+                        <td>Object.assgin()</td>
+                        <td>合并对象</td>
+                    </tr>
+                    <tr>
+                        <td>object.freeze()</td>
+                        <td>冻结对象</td>
+                    </tr>
+                    <tr>
+                        <td>Object.keys()</td>
+                        <td>遍历对象的键</td>
+                    </tr>
+                    <tr>
+                        <td>Object.values()</td>
+                        <td>遍历对象的值</td>
+                    </tr>
+                    <tr>
+                        <td>Object.entries()</td>
+                        <td>同时遍历对象的键和值</td>
+                    </tr>
+                    <tr>
+                        <td>Object.fromEntries()</td>
+                        <td>将键值对数组转换为对象</td>
+                    </tr>
+                    <tr>
+                        <td>Object.getPrototypeOf()</td>
+                        <td>获取原型</td>
+                    </tr>
+                    <tr>
+                        <td>Object.getOwnPropertyNames()</td>
+                        <td>获取所有属性名</td>
+                    </tr>
+                    <tr>
+                        <td>Object.defineProperty()</td>
+                        <td>定义新属性</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="method">
+            <table>
+                <caption>Set类型</caption>
+                <tbody>
+                    <tr>
+                        <td>size</td>
+                        <td>元素个数</td>
+                    </tr>
+                    <tr>
+                        <td>add()</td>
+                        <td>添加元素</td>
+                    </tr>
+                    <tr>
+                        <td>delete()</td>
+                        <td>删除元素</td>
+                    </tr>
+                    <tr>
+                        <td>clear()</td>
+                        <td>清空set</td>
+                    </tr>
+                    <tr>
+                        <td>has()</td>
+                        <td>判断是否存在某个元素</td>
+                    </tr>
+                    <tr>
+                        <td>forEach()</td>
+                        <td>遍历元素</td>
+                    </tr>
+                    <tr>
+                        <td>keys()</td>
+                        <td>遍历key，返回一个iterator对象</td>
+                    </tr>
+                    <tr>
+                        <td>values()</td>
+                        <td>遍历value，返回一个iterator对象</td>
+                    </tr>
+                    <tr>
+                        <td>entries()</td>
+                        <td>同时遍历key和value，返回一个iterator对象</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="method">
+            <table>
+                <caption>Map类型</caption>
+                <tbody>
+                    <tr>
+                        <td>size</td>
+                        <td>元素个数</td>
+                    </tr>
+                    <tr>
+                        <td>get()</td>
+                        <td>获取元素</td>
+                    </tr>
+                    <tr>
+                        <td>set()</td>
+                        <td>添加元素</td>
+                    </tr>
+                    <tr>
+                        <td>delete()</td>
+                        <td>删除元素</td>
+                    </tr>
+                    <tr>
+                        <td>clear()</td>
+                        <td>清空map</td>
+                    </tr>
+                    <tr>
+                        <td>has()</td>
+                        <td>判断是否存在某个元素</td>
+                    </tr>
+                    <tr>
+                        <td>forEach()</td>
+                        <td>遍历元素</td>
+                    </tr>
+                    <tr>
+                        <td>keys()</td>
+                        <td>遍历key，返回一个iterator对象</td>
+                    </tr>
+                    <tr>
+                        <td>values()</td>
+                        <td>遍历value，返回一个iterator对象</td>
+                    </tr>
+                    <tr>
+                        <td>entries()</td>
+                        <td>同时遍历key和value，返回一个iterator对象</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="method">
+            <table>
+                <caption>proxy对象</caption>
+                <tbody>
+                    <tr>
+                        <td>get()</td>
+                        <td>拦截读的属性</td>
+                    </tr>
+                    <tr>
+                        <td>set()</td>
+                        <td>拦截写的属性</td>
+                    </tr>
+                    <tr>
+                        <td>has()</td>
+                        <td>拦截in操作</td>
+                    </tr>
+                    <tr>
+                        <td>deleteProperty()</td>
+                        <td>拦截delete操作</td>
+                    </tr>
+                    <tr>
+                        <td>ownKeys()</td>
+                        <td>拦截遍历操作</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="method">
+            <table>
+                <caption>Reflect对象</caption>
+                <tbody>
+                    <tr>
+                        <td>Reflect.has()</td>
+                        <td>规范in操作</td>
+                    </tr>
+                    <tr>
+                        <td>Reflect.deleteProperty()</td>
+                        <td>规范delete操作</td>
+                    </tr>
+                    <tr>
+                        <td>Reflect.defineProperty()</td>
+                        <td>定义一个属性</td>
+                    </tr>
+                    <tr>
+                        <td>Reflect.ownKeys()</td>
+                        <td>获取所有属性</td>
+                    </tr>
+                    <tr>
+                        <td>get()</td>
+                        <td>获取属性值</td>
+                    </tr>
+                    <tr>
+                        <td>set()</td>
+                        <td>设置属性值</td>
+                    </tr>
+                    <tr>
+                        <td>has()</td>
+                        <td>in操作</td>
+                    </tr>
+                    <tr>
+                        <td>deleteProperty()</td>
+                        <td>delete操作</td>
+                    </tr>
+                    <tr>
+                        <td>ownKeys()</td>
+                        <td>遍历操作</td>
+                    </tr>
                 </tbody>
             </table>
         </div>
