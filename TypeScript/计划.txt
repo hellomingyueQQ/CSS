@@ -4,7 +4,8 @@
 
 搭建环境：
       1. 建立ts文件，直接命令行 tsc xxx.ts,生成js
-      2. code runner，全局需要安装ts-node
+            tsc xx.ts -w
+      2. code runner，全局需要安装ts-node npm install -g ts-node
 
 目标：
       项目typescript代码和配置，全都能看懂
