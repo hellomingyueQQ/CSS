@@ -1,2 +1,6 @@
 bom 对象window，dom对象 document，他们都是顶级对象
 chrome里面也实现了global globalThis，它俩是一样的
+
+utf-8一个中文占三个字节
+byte的数据如果超过八位，多出来的位将被舍弃
+utf-8是unicode字符集的实现方式，unicode兼容ascii码
