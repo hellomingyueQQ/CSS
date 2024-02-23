@@ -21,8 +21,32 @@ class Range {
 let r = new Range(1, 3); // Create a Range object
 r.includes(2) // => true: 2 is in the range
 r.toString() // => "(1...3)"
-console.log([...r] ); // => [1, 2, 3]; convert to an array via iterator
+console.log([...r]); // => [1, 2, 3]; convert to an array via iterator
 
 console.log("'r.constructor === Object'", "==>", r.constructor === Object);
 console.log("'r.constructor === Range'", "==>", r.constructor === Range);
 // 9.3是9.2的语法糖
+
+{
+    // A Span is like a Range, but instead of initializing it with
+    // a start and an end, we initialize it with a start and a length
+    class Span extends Range {
+        constructor(start, length) {
+            if (length >= 0) {
+                super(start, start + length);
+            } else {
+                super(start + length, start);
+            }
+        }
+    }
+}
+
+{
+    let square = function (x) { return x * x; };
+    square(3) // => 9
+}
+
+{
+    let Square = class { constructor(x) { this.area = x * x; } };
+    new Square(3).area // => 9
+}
