@@ -60,3 +60,10 @@ c.plus(d).toString() // => "{5,5}"; use instance methods
 c.magnitude // => Math.hypot(2,3); use a getter function
 Complex.product(c, d) // => new Complex(0, 13); a static method
 Complex.ZERO.toString() // => "{0,0}"; a static property
+
+let c = new Complex(2, 3); // Create a new object with the constructor
+let d = new Complex(c.i, c.r); // Use instance fields of c
+c.plus(d).toString() // => "{5,5}"; use instance methods
+c.magnitude // => Math.hypot(2,3); use a getter function
+Complex.product(c, d) // => new Complex(0, 13); a static method
+Complex.ZERO.toString() // => "{0,0}"; a static property
