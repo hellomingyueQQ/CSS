@@ -1,6 +1,7 @@
 /**
  * Instances of this Complex class represent complex numbers.
- * Recall that a complex number is the sum of a real number and an
+ * 
+ *  that a complex number is the sum of a real number and an
  * imaginary number and that the imaginary number i is the square root of -1.
  */
 class Complex {
